@@ -28,7 +28,7 @@ app.use(passport.initialize());
 //Passport config
 
 require('./config/passport')(passport);
-
+app.get('/',(req,res)=>{ res.send("API is working")})
 app.use('/', SignUpController);
 app.use('/', BookController);
 app.use('/', UserOrderController);
